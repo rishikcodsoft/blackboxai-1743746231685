@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuelElite | Premium Fuel Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .hero-bg {
+      background-image: url('https://images.pexels.com/photos/3497681/pexels-photo-3497681.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header Component -->
+  <?php include 'header.html'; ?>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-screen flex items-center relative">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container mx-auto px-4 z-10 text-white">
+      <div class="max-w-2xl">
+        <h1 class="text-5xl font-bold mb-6">Premium Fuel <span class="text-yellow-300">Delivery</span></h1>
+        <p class="text-xl mb-8">24/7 on-demand fuel delivery to your home or business. Fast, reliable, and contactless.</p>
+        
+        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+          <h3 class="text-2xl font-semibold mb-4">Request Fuel Now</h3>
+          <form class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-sm mb-1">Fuel Type</label>
+              <select class="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white">
+                <option>Premium Unleaded</option>
+                <option>Diesel</option>
+                <option>Biofuel</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm mb-1">Quantity (Liters)</label>
+              <input type="number" class="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white" placeholder="50">
+            </div>
+            <div class="flex items-end">
+              <button class="w-full bg-yellow-400 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-yellow-300 transition">
+                Get Fuel Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Our Premium Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Tailored fuel solutions for every need</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+          <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-bolt text-yellow-500 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Emergency Delivery</h3>
+          <p class="text-gray-600 mb-4">24/7 priority service with response in under 30 minutes.</p>
+          <a href="#" class="text-primary font-medium flex items-center">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-building text-blue-500 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Corporate Solutions</h3>
+          <p class="text-gray-600 mb-4">Custom fuel management for businesses of all sizes.</p>
+          <a href="#" class="text-primary font-medium flex items-center">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card bg-gray-50 p-8 rounded-xl transition duration-300">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fas fa-car text-green-500 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Luxury Vehicle Care</h3>
+          <p class="text-gray-600 mb-4">Specialized fuels for high-performance vehicles.</p>
+          <a href="#" class="text-primary font-medium flex items-center">
+            Learn more <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Component -->
+  <?php include 'footer.html'; ?>
+
+  <script>
+    // Mobile menu toggle functionality would go here
+    document.addEventListener('DOMContentLoaded', function() {
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      darkModeToggle.addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+      });
+    });
+  </script>
+</body>
+</html>
