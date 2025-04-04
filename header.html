@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FuelElite | Premium Fuel Delivery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+            secondary: '#3B82F6',
+            dark: '#1E293B'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-bg {
+      background-image: url('https://images.pexels.com/photos/3497681/pexels-photo-3497681.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <header class="bg-gradient-to-r from-primary to-secondary text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+        <h1 class="text-2xl font-bold">Fuel<span class="text-yellow-300">Elite</span></h1>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#" class="hover:text-yellow-300 transition">Home</a>
+        <a href="#services" class="hover:text-yellow-300 transition">Services</a>
+        <a href="#pricing" class="hover:text-yellow-300 transition">Pricing</a>
+        <a href="#about" class="hover:text-yellow-300 transition">About</a>
+        <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+        <a href="#" class="bg-white text-primary px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition">Login</a>
+      </nav>
+
+      <button class="md:hidden text-2xl">☰</button>
+    </div>
+  </header>
