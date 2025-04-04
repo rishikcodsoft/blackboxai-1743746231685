@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | FuelElite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .login-bg {
+      background-image: url('https://images.pexels.com/photos/1939485/pexels-photo-1939485.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .login-card {
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header Component -->
+  <?php include 'header.html'; ?>
+
+  <!-- Main Content -->
+  <main class="login-bg flex items-center justify-center min-h-screen relative">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container mx-auto px-4 z-10 py-16">
+      <div class="max-w-md mx-auto login-card bg-white rounded-xl overflow-hidden">
+        <!-- Card Header -->
+        <div class="bg-primary text-white p-6 text-center">
+          <h1 class="text-3xl font-bold">Welcome Back</h1>
+          <p class="mt-2">Sign in to your FuelElite account</p>
+        </div>
+
+        <!-- Card Body -->
+        <div class="p-8">
+          <form>
+            <!-- Email -->
+            <div class="mb-6">
+              <label class="block text-gray-700 mb-2">Email Address</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-envelope text-gray-400"></i>
+                </div>
+                <input type="email" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="you@example.com">
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-6">
+              <label class="block text-gray-700 mb-2">Password</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <i class="fas fa-lock text-gray-400"></i>
+                </div>
+                <input type="password" class="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="••••••••">
+                <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                  <i class="fas fa-eye text-gray-400 hover:text-primary"></i>
+                </button>
+              </div>
+              <div class="flex justify-end mt-2">
+                <a href="#" class="text-sm text-primary hover:underline">Forgot password?</a>
+              </div>
+            </div>
+
+            <!-- Remember Me -->
+            <div class="mb-6 flex items-center">
+              <input type="checkbox" id="remember" class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded">
+              <label for="remember" class="ml-2 block text-gray-700">Remember me</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition font-medium mb-6">
+              Sign In
+            </button>
+
+            <!-- Social Login -->
+            <div class="mb-6">
+              <div class="relative">
+                <div class="absolute inset-0 flex items-center">
+                  <div class="w-full border-t border-gray-300"></div>
+                </div>
+                <div class="relative flex justify-center text-sm">
+                  <span class="px-2 bg-white text-gray-500">Or continue with</span>
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-2 gap-3">
+                <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                  <i class="fab fa-google text-red-500 mr-2"></i> Google
+                </button>
+                <button type="button" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                  <i class="fab fa-facebook-f text-blue-600 mr-2"></i> Facebook
+                </button>
+              </div>
+            </div>
+
+            <!-- Sign Up Link -->
+            <div class="text-center">
+              <p class="text-gray-600">Don't have an account? <a href="signup.html" class="text-primary font-medium hover:underline">Sign up</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Component -->
+  <?php include 'footer.html'; ?>
+
+  <script>
+    // Toggle password visibility
+    document.querySelectorAll('.fa-eye').forEach(icon => {
+      icon.addEventListener('click', function() {
+        const input = this.parentNode.previousElementSibling;
+        if (input.type === 'password') {
+          input.type = 'text';
+          this.classList.replace('fa-eye', 'fa-eye-slash');
+        } else {
+          input.type = 'password';
+          this.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
