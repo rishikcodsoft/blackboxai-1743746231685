@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Plans | FuelElite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .pricing-hero {
+      background-image: url('https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .pricing-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header Component -->
+  <?php include 'header.html'; ?>
+
+  <!-- Hero Section -->
+  <section class="pricing-hero h-96 flex items-center relative">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container mx-auto px-4 z-10 text-white text-center">
+      <h1 class="text-5xl font-bold mb-4">Simple, Transparent Pricing</h1>
+      <p class="text-xl max-w-2xl mx-auto">No hidden fees. Pay only for what you need.</p>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Choose Your Plan</h2>
+        <div class="inline-flex items-center bg-gray-100 rounded-full p-1">
+          <button class="px-6 py-2 rounded-full bg-primary text-white font-medium">Monthly</button>
+          <button class="px-6 py-2 rounded-full text-gray-600 font-medium">Annual (Save 15%)</button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Basic Plan -->
+        <div class="pricing-card bg-white border border-gray-200 rounded-xl p-8 relative transition duration-300">
+          <h3 class="text-xl font-bold mb-2">Basic</h3>
+          <p class="text-gray-600 mb-6">For occasional fuel needs</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$99</span>
+            <span class="text-gray-500">/month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Up to 500 liters</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Standard delivery</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Email support</li>
+            <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> Priority service</li>
+            <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> Bulk discounts</li>
+          </ul>
+          <button class="w-full border border-primary text-primary py-3 rounded-lg hover:bg-blue-50 transition">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Popular Plan -->
+        <div class="pricing-card bg-white border-2 border-primary rounded-xl p-8 relative transition duration-300 shadow-lg">
+          <div class="popular-badge text-white text-xs font-bold px-3 py-1 rounded-full">
+            MOST POPULAR
+          </div>
+          <h3 class="text-xl font-bold mb-2">Premium</h3>
+          <p class="text-gray-600 mb-6">For regular fuel users</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">$199</span>
+            <span class="text-gray-500">/month</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Up to 1,500 liters</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Priority delivery</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 24/7 phone support</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 10% bulk discount</li>
+            <li class="flex items-center text-gray-400"><i class="fas fa-times text-red-400 mr-2"></i> Dedicated account</li>
+          </ul>
+          <button class="w-full bg-primary text-white py-3 rounded-lg hover:bg-blue-700 transition">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="pricing-card bg-white border border-gray-200 rounded-xl p-8 relative transition duration-300">
+          <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+          <p class="text-gray-600 mb-6">For large volume needs</p>
+          <div class="mb-6">
+            <span class="text-4xl font-bold">Custom</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited volume</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Dedicated dispatcher</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 24/7 VIP support</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Volume discounts</li>
+            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Custom contracts</li>
+          </ul>
+          <button class="w-full border border-primary text-primary py-3 rounded-lg hover:bg-blue-50 transition">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Plan Comparison</h2>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="text-left p-4">Features</th>
+              <th class="p-4">Basic</th>
+              <th class="p-4">Premium</th>
+              <th class="p-4">Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-200">
+              <td class="p-4 font-medium">Monthly Price</td>
+              <td class="p-4 text-center">$99</td>
+              <td class="p-4 text-center">$199</td>
+              <td class="p-4 text-center">Custom</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="p-4 font-medium">Included Fuel</td>
+              <td class="p-4 text-center">500L</td>
+              <td class="p-4 text-center">1,500L</td>
+              <td class="p-4 text-center">Unlimited</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="p-4 font-medium">Delivery Time</td>
+              <td class="p-4 text-center">2-4 hours</td>
+              <td class="p-4 text-center">1-2 hours</td>
+              <td class="p-4 text-center">≤1 hour</td>
+            </tr>
+            <tr class="border-b border-gray-200">
+              <td class="p-4 font-medium">Support</td>
+              <td class="p-4 text-center">Email</td>
+              <td class="p-4 text-center">24/7 Phone</td>
+              <td class="p-4 text-center">Dedicated</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Bulk Discounts</td>
+              <td class="p-4 text-center">-</td>
+              <td class="p-4 text-center">10%</td>
+              <td class="p-4 text-center">Custom</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      
+      <div class="space-y-4">
+        <!-- FAQ Item 1 -->
+        <div class="border border-gray-200 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full">
+            <h3 class="text-lg font-medium text-left">What payment methods do you accept?</h3>
+            <i class="fas fa-chevron-down text-gray-400"></i>
+          </button>
+          <div class="mt-4 text-gray-600 hidden">
+            We accept all major credit cards (Visa, Mastercard, American Express), PayPal, and bank transfers. Corporate accounts can be set up with net-30 terms.
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="border border-gray-200 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full">
+            <h3 class="text-lg font-medium text-left">Is there a cancellation fee?</h3>
+            <i class="fas fa-chevron-down text-gray-400"></i>
+          </button>
+          <div class="mt-4 text-gray-600 hidden">
+            You can cancel your plan at any time with no cancellation fees. We'll prorate your final bill based on your usage.
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="border border-gray-200 rounded-lg p-6">
+          <button class="flex justify-between items-center w-full">
+            <h3 class="text-lg font-medium text-left">Can I change plans later?</h3>
+            <i class="fas fa-chevron-down text-gray-400"></i>
+          </button>
+          <div class="mt-4 text-gray-600 hidden">
+            Yes, you can upgrade or downgrade your plan at any time through your account dashboard. Changes take effect at the start of your next billing cycle.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to get started?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who trust FuelElite for their fuel delivery needs.</p>
+      <button class="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-medium">
+        Sign Up Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Footer Component -->
+  <?php include 'footer.html'; ?>
+
+  <script>
+    // FAQ toggle functionality
+    document.querySelectorAll('.border-gray-200 button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector('i');
+        
+        content.classList.toggle('hidden');
+        icon.classList.toggle('fa-chevron-down');
+        icon.classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
+</body>
+</html>
