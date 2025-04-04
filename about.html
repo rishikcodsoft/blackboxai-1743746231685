@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | FuelElite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .about-hero {
+      background-image: url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg');
+      background-size: cover;
+      background-position: center;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- Header Component -->
+  <?php include 'header.html'; ?>
+
+  <!-- Hero Section -->
+  <section class="about-hero h-96 flex items-center relative">
+    <div class="absolute inset-0 bg-black/50"></div>
+    <div class="container mx-auto px-4 z-10 text-white text-center">
+      <h1 class="text-5xl font-bold mb-4">Our Story</h1>
+      <p class="text-xl max-w-2xl mx-auto">Redefining fuel delivery through innovation and reliability</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl font-bold mb-6">Who We Are</h2>
+        <p class="text-gray-600 mb-6">FuelElite was founded in 2018 with a simple mission: to revolutionize the fuel delivery industry by combining cutting-edge technology with exceptional customer service.</p>
+        <p class="text-gray-600">What started as a small operation with two trucks has grown into the nation's leading on-demand fuel delivery service, serving thousands of satisfied residential and commercial customers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Stat 1 -->
+        <div class="bg-gray-50 p-6 rounded-xl text-center">
+          <div class="text-5xl font-bold text-primary mb-2">10K+</div>
+          <div class="text-gray-600">Customers Served</div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="bg-gray-50 p-6 rounded-xl text-center">
+          <div class="text-5xl font-bold text-primary mb-2">24/7</div>
+          <div class="text-gray-600">Service Availability</div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="bg-gray-50 p-6 rounded-xl text-center">
+          <div class="text-5xl font-bold text-primary mb-2">45m</div>
+          <div class="text-gray-600">Avg. Response Time</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+          <p class="text-gray-600 mb-4">To provide safe, reliable, and convenient fuel delivery solutions that save our customers time and money while reducing environmental impact through optimized routing and modern fleet technology.</p>
+          <p class="text-gray-600">We believe in transparency, sustainability, and putting our customers first in everything we do.</p>
+        </div>
+        <div class="bg-gray-100 rounded-xl overflow-hidden">
+          <img src="https://images.pexels.com/photos/221027/pexels-photo-221027.jpeg" alt="Fuel delivery truck" class="w-full h-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Meet Our Leadership</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">The experienced team driving FuelElite's success</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Team Member 1 -->
+        <div class="team-card bg-white p-6 rounded-xl text-center transition duration-300">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary">
+            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="Sarah Johnson" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">Sarah Johnson</h3>
+          <p class="text-primary font-medium mb-4">CEO & Founder</p>
+          <p class="text-gray-600 mb-4">Former energy executive with 15+ years in the fuel industry.</p>
+          <div class="flex justify-center space-x-3">
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card bg-white p-6 rounded-xl text-center transition duration-300">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary">
+            <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Michael Chen" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">Michael Chen</h3>
+          <p class="text-primary font-medium mb-4">CTO</p>
+          <p class="text-gray-600 mb-4">Tech innovator specializing in logistics and fleet management.</p>
+          <div class="flex justify-center space-x-3">
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card bg-white p-6 rounded-xl text-center transition duration-300">
+          <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary">
+            <img src="https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg" alt="David Rodriguez" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold mb-1">David Rodriguez</h3>
+          <p class="text-primary font-medium mb-4">Operations Director</p>
+          <p class="text-gray-600 mb-4">Logistics expert with a focus on safety and efficiency.</p>
+          <div class="flex justify-center space-x-3">
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-400 hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Our Core Values</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">The principles that guide everything we do</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Value 1 -->
+        <div class="p-6 border border-gray-200 rounded-xl hover:border-primary transition">
+          <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Safety First</h3>
+          <p class="text-gray-600">We prioritize the safety of our customers, employees, and communities above all else.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="p-6 border border-gray-200 rounded-xl hover:border-primary transition">
+          <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Environmental Stewardship</h3>
+          <p class="text-gray-600">We're committed to reducing our environmental impact through efficient operations.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="p-6 border border-gray-200 rounded-xl hover:border-primary transition">
+          <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center text-primary text-2xl mb-4">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Customer Obsession</h3>
+          <p class="text-gray-600">We go above and beyond to deliver exceptional service and build lasting relationships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready to experience premium fuel delivery?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who trust FuelElite.</p>
+      <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="bg-white text-primary px-8 py-4 rounded-lg hover:bg-gray-100 transition font-medium">
+          Get Started
+        </button>
+        <button class="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white/10 transition font-medium">
+          Learn More
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Component -->
+  <?php include 'footer.html'; ?>
+</body>
+</html>
